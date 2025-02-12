@@ -1,6 +1,7 @@
 # Portfolio-architecte-sophie-bluel
 
-Code du projet 6 d'intégrateur web.
+Projet 6 parcours Intégrateur d'openclassrooms.
+Implémenter les fonctionnalités dynamiques pour le site de l'architecte Sophie Bluel. Utilisation de JS natif, aucun framework.
 
 ## Information pour le lancer le code
 
