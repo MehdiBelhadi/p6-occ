@@ -11,17 +11,73 @@
 		rel="stylesheet">
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
+	<script src="https://kit.fontawesome.com/2df4fe767c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+	<aside id="modal1" class="modal" aria-hidden="true" role="dialog" aria-labelledby="titlemodal"
+		style="display: none">
+
+		<div class="modal-wrapper js-modal-stop">
+			<div class="gallery-modal">
+				<div class="close-button-container">
+					<button class="js-modal-close">
+						<i class="fa-solid fa-xmark"></i>
+					</button>
+				</div>
+
+				<h3>Galerie Photo</h3>
+				<div class="modal-gallery"></div>
+				<hr />
+				<div class="modal-button-container">
+					<button class="add-photo-button">Ajouter une photo</button>
+				</div>
+			</div>
+			<!--  -->
+			<div class="add-modal" style="display: none;">
+				<div class="modal-buttons-container">
+					<button class="js-modal-back">
+						<i class="fa-solid fa-arrow-left"></i>
+					</button>
+					<button class="js-modal-close">
+						<i class="fa-solid fa-xmark"></i>
+					</button>
+				</div>
+
+				<h3>Ajout photo</h3>
+				<div class="form add-photo-form">
+					<form id="picture-form" action="#" method="post">
+						<div class="file-section">
+							<div id="photo-container"></div>
+							<div><i class="fa-regular fa-image picture-loaded"></i></div>
+							<label class="picture-loaded" for="file">+ Ajouter photo</label>
+							<input type="file" id="file" name="file" accept="image/png, image/jpeg" />
+							<p class="picture-loaded">jpg, png : 4mo max</p>
+						</div>
+						<label for="title">Titre</label>
+						<input type="text" name="title" id="title" />
+						<label for="category">Catégorie</label>
+						<select id="category" name="category" size="1">
+							<option value="" selected disabled></option>
+							<option value="1">Objets</option>
+							<option value="2">Appartements</option>
+							<option value="3">Hotels & restaurants</option>
+						</select>
+						<hr />
+						<input type="submit" value="Valider" />
+					</form>
+				</div>
+			</div>
+		</div>
+	</aside>
 	<header>
 		<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
 		<nav>
 			<ul>
-				<li>projets</li>
-				<li>contact</li>
-				<li>login</li>
-				<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
+				<li><a href="#portfolio">projets</a></li>
+				<li><a href="#contact">contact</a></li>
+				<li><a class="log-button" href="login.html">login</a></li>
+				<li><img src="./assets/icons/instagram.png" alt="Instagram" /></li>
 			</ul>
 		</nav>
 	</header>
@@ -42,23 +98,29 @@
 			</article>
 		</section>
 		<section id="portfolio">
-			<h2>Mes Projets</h2>
-			<div class="gallery">
+			<div class="projets-container">
+				<h2 class="projets-title">Mes projets</h2>
+				<a href="#modal1" style="display: none" class="js-modal js-modal-2"><i
+						class="fa-regular fa-pen-to-square"></i>modifier</a>
 			</div>
+
+			<div class="div-container">
+				<div class="all active-filter">Tous</div>
+			</div>
+			<div class="gallery"></div>
 		</section>
-		<section id="contact">
-			<h2>Contact</h2>
+		<div class="form">
+			<h2 id="contact">Contact</h2>
 			<p>Vous avez un projet ? Discutons-en !</p>
 			<form action="#" method="post">
 				<label for="name">Nom</label>
-				<input type="text" name="name" id="name">
+				<input type="text" name="name" id="name" />
 				<label for="email">Email</label>
-				<input type="email" name="email" id="email">
+				<input type="email" name="email" id="email" />
 				<label for="message">Message</label>
 				<textarea name="message" id="message" cols="30" rows="10"></textarea>
-				<input type="submit" value="Envoyer">
+				<input type="submit" value="Envoyer" />
 			</form>
-		</section>
 	</main>
 
 	<footer>
